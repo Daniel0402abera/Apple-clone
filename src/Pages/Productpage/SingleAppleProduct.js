@@ -6,8 +6,8 @@ function SingleAppleProduct({ match }) {
   useEffect(() => {
     fetchItem();
 
-    console.log(match);
-    console.log(match.params.pid);
+    // console.log(match);
+    // console.log(match.params.pid);
   }, []);
 
   const [products, setItem] = useState([]);

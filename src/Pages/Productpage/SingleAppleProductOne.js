@@ -4,27 +4,27 @@ import AddToCart from "../../Components/AddToCart/AddToCart";
 
 function SingleAppleProductOne({ match }) {
   useEffect(() => {
-    fetchItem();
+     const fetchItem = async () => {
+       //   const fetchItem =   fetch(`"http://localhost:430/product/"`);
+       //   const item = await fetchItem.json();
 
-    console.log(match);
-    console.log(match.params.pid);
+       //   console.log(item);
+
+       fetch(`http://localhost:431/product/${match.params.pid}`)
+         .then((res) => res.json())
+         .then((products) => {
+           setItem(() => products);
+           console.log(products);
+         });
+     };
+
+    // console.log(match);
+    // console.log(match.params.pid);
   }, []);
 
   const [products, setItem] = useState([]);
 
-  const fetchItem = async () => {
-    //   const fetchItem =   fetch(`"http://localhost:430/product/"`);
-    //   const item = await fetchItem.json();
 
-    //   console.log(item);
-
-    fetch(`http://localhost:431/product/${match.params.pid}`)
-      .then((res) => res.json())
-      .then((products) => {
-        setItem(() => products);
-        console.log(products);
-      });
-  };
 
   return (
     <div>

@@ -37,8 +37,8 @@ function Iphone() {
             let Brief = product.product_brief_description;
             let StartPrice = product.starting_price;
             let PriceRange = product.price_range;
-            {/* let SingleAppleProductOne = "/iphone/" + id; */}
-            let SingleAppleProduct ="/iphone/" +id;
+            let SingleAppleProductOne = "/iphone/" + id;
+            {/* let SingleAppleProduct ="/iphone/" +id; */}
 
             let order1 = 1;
             let order2 = 2;
@@ -66,8 +66,8 @@ function Iphone() {
                     <ul>
                       <li>
                         
-                        {/* <Link to={SingleAppleProductOne}>Learn more</Link> */}
-                        <Link to={SingleAppleProduct}>Learn more</Link>
+                        <Link to={SingleAppleProductOne}>Learn more</Link>
+                        {/* <Link to={SingleAppleProduct}>Learn more</Link> */}
                       </li>
                     </ul>
                   </div>

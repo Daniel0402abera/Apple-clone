@@ -13,7 +13,7 @@ function Iphone() {
         // console.log(products);
       });
     // setProducts(products)
-    // console.log(products);
+    console.log(products);
   }, []);
 
   // console.log(data);

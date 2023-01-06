@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AddToCart from "../../Components/AddToCart/AddToCart";
 
-function SingleAppleProductOne({ match }) {
+function SingleAppleProductOne() {
+
+  console.log("Hello world");
+  const {pid} = useParams();
+  console.log(pid);
   useEffect(() => {
-     const fetchItem = async () => {
-       //   const fetchItem =   fetch(`"http://localhost:430/product/"`);
-       //   const item = await fetchItem.json();
-
-       //   console.log(item);
-
-       fetch(`http://localhost:431/product/${match.params.pid}`)
-         .then((res) => res.json())
-         .then((products) => {
-           setItem(() => products);
-           console.log(products);
-         });
-     };
+   fetchItem();
 
     // console.log(match);
     // console.log(match.params.pid);
@@ -24,6 +16,19 @@ function SingleAppleProductOne({ match }) {
 
   const [products, setItem] = useState([]);
 
+    const fetchItem = async () => {
+      //   const fetchItem =   fetch(`"http://localhost:430/product/"`);
+      //   const item = await fetchItem.json();
+
+      //   console.log(item);
+
+      fetch(`http://localhost:431/product/${pid}`)
+        .then((res) => res.json())
+        .then((products) => {
+          setItem(() => products);
+          console.log(products);
+        });
+    };
 
 
   return (

@@ -7,7 +7,7 @@ function SingleAppleProduct({ match }) {
     fetchItem();
 
     // console.log(match);
-    // console.log(match.params.pid);
+    console.log(match.params.pid);
   }, []);
 
   const [products, setItem] = useState([]);
